@@ -1,0 +1,143 @@
+@charset "UTF-8";
+@import "mrz-social-icons";
+
+$icon-color: white;
+
+$social-networks: (
+	"dribbble"		, #E24B85,
+	"dropbox"		, #007DE4,
+	"facebook"		, #3B5998,
+	"flattr"		, #6CBC16,
+	"flickr"		, #0162C9,
+	"github"		, #4183C4,
+	"gplus"			, #DD4B39,
+	"instagram"		, #3E739D,
+	"linkedin"		, #017EB4,
+	"paypal"		, #193864,
+	"pinterest"		, #F51617,
+	"soundcloud"	, #FE531B,
+	"stumbleupon"	, #EC4823,
+	"tumblr"		, #2C4762,
+	"twitter"		, #00ABF0,
+	"vimeo"			, #1BB2E9,
+    "behance"       , #2D9AD2,
+    "evernote"      , #61B737,
+    "lastfm"        , #CA1E24,
+    "mixi"          , #FFAA0A,
+    "picasa"        , #9864AE,
+    "rdio"          , #037EC4,
+    "renren"        , #025DAC,
+    "sina-weibo"    , #D52B2B,
+    "skype"         , #01AEF2,
+    "spotify"       , #80B819,
+    "vkontakte"     , #54769A,
+    "yelp"			, #BA0C03
+);
+
+@mixin group {
+	&:after {
+  		content: "";
+  		display: table;
+		clear: both;
+  	}
+}
+
+.widget_mrz_social_icons_widget,
+.widget_mrz_social_counter_widget {
+	&,
+	*,
+	*:before,
+	*:after {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+	}
+}
+
+.mrz-social-icons,
+.mrz-social-counters {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	[class^="mrz-social-link-"] {
+		color: $icon-color !important;
+		display: block;
+		height: 1em;
+		line-height: 1em;
+		text-decoration: none;
+		width: 1em;
+		&:hover,
+		&:focus,
+		&:visited {
+			color: $icon-color;
+		}
+	}
+	[class^="mrz-social-icon-"] {
+		font-size: 0.75em;
+		display: block;
+	}
+}
+
+.mrz-social-icons {
+	li {
+		display: inline-block;
+	}
+}
+
+.mrz-social-counters {
+	li {
+		position: relative;
+		margin-bottom: 0.5em;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		[class^="mrz-social-link-"] {
+			left: 0;
+			position: absolute;
+			top: 0;
+		}
+		div {
+			height: 1em;
+			line-height: 1em;
+			padding-left: 1.8em;
+			width: 100%;
+			font-weight: bold;
+			position: relative;
+			&:before {
+				border-bottom: 0.5em solid transparent;
+				border-right: 0.5em solid #E9E9E9;
+				border-top: 0.5em solid transparent;
+				content: "";
+				display: block;
+				height: 0;
+				left: 1.3em;
+				position: absolute;
+				top: 0;
+				width: 0;
+			}
+			span {
+				-webkit-border-radius: 0 2px 2px 0;
+				   -moz-border-radius: 0 2px 2px 0;
+						border-radius: 0 2px 2px 0;
+				-webkit-box-shadow: inset 0 0 0 1px #E9E9E9;
+				   -moz-box-shadow: inset 0 0 0 1px #E9E9E9;
+						box-shadow: inset 0 0 0 1px #E9E9E9;
+				display: block;
+				font-size: 0.6em;
+				text-align: center;
+			}
+		}
+	}
+}
+
+$i: 1;
+@while $i < length($social-networks) {
+	.mrz-social-link-#{nth($social-networks, $i)} {
+		background-color: nth($social-networks, $i+1);
+		&:hover,
+		&:focus {
+			background-color: darken(nth($social-networks, $i+1), 5%);
+		}
+	}
+  	$i: $i + 2 !global;
+}
