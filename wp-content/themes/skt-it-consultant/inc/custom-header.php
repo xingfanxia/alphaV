@@ -1,33 +1,33 @@
 <?php
 /**
- * @package SKT Gravida
+ * @package SKT IT Consultant
  * Setup the WordPress core custom header feature.
  *
- * @uses gravida_header_style()
- * @uses gravida_admin_header_style()
- * @uses gravida_admin_header_image()
+ * @uses itconsultant_header_style()
+ * @uses itconsultant_admin_header_style()
+ * @uses itconsultant_admin_header_image()
 
  */
-function gravida_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'gravida_custom_header_args', array(
+function itconsultant_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'itconsultant_custom_header_args', array(
 		'default-image'          => get_template_directory_uri().'/images/header-bg.jpg',
 		'default-text-color'     => 'fff',
 		'width'                  => 1600,
 		'height'                 => 400,
-		'wp-head-callback'       => 'gravida_header_style',
-		'admin-head-callback'    => 'gravida_admin_header_style',
-		'admin-preview-callback' => 'gravida_admin_header_image',
+		'wp-head-callback'       => 'itconsultant_header_style',
+		'admin-head-callback'    => 'itconsultant_admin_header_style',
+		'admin-preview-callback' => 'itconsultant_admin_header_image',
 	) ) );
 }
-add_action( 'after_setup_theme', 'gravida_custom_header_setup' );
+add_action( 'after_setup_theme', 'itconsultant_custom_header_setup' );
 
-if ( ! function_exists( 'gravida_header_style' ) ) :
+if ( ! function_exists( 'itconsultant_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog
  *
- * @see gravida_custom_header_setup().
+ * @see itconsultant_custom_header_setup().
  */
-function gravida_header_style() {
+function itconsultant_header_style() {
 	$header_text_color = get_header_textcolor();
 	?>
 	<style type="text/css">
@@ -43,20 +43,20 @@ function gravida_header_style() {
 	</style>
 	<?php
 }
-endif; // gravida_header_style
+endif; // itconsultant_header_style
 
-if ( ! function_exists( 'gravida_admin_header_style' ) ) :
+if ( ! function_exists( 'itconsultant_admin_header_style' ) ) :
 /**
  * Styles the header image displayed on the Appearance > Header admin panel.
  *
- * @see gravida_custom_header_setup().
+ * @see itconsultant_custom_header_setup().
  */
-function gravida_admin_header_style() {?>
+function itconsultant_admin_header_style() {?>
 	<style type="text/css">
 	.appearance_page_custom-header #headimg { border: none; }
 	</style><?php
 }
-endif; // gravida_admin_header_style
+endif; // itconsultant_admin_header_style
 
 
 add_action( 'admin_head', 'admin_header_css' );
@@ -65,13 +65,13 @@ function admin_header_css(){ ?>
 }
 
 
-if ( ! function_exists( 'gravida_admin_header_image' ) ) :
+if ( ! function_exists( 'itconsultant_admin_header_image' ) ) :
 /**
  * Custom header image markup displayed on the Appearance > Header admin panel.
  *
- * @see gravida_custom_header_setup().
+ * @see itconsultant_custom_header_setup().
  */
-function gravida_admin_header_image() {
+function itconsultant_admin_header_image() {
 	$style = sprintf( ' style="color:#%s;"', get_header_textcolor() );
 ?>
 	<div id="headimg">
@@ -81,4 +81,4 @@ function gravida_admin_header_image() {
 	</div>
 <?php
 }
-endif; // gravida_admin_header_image 
+endif; // itconsultant_admin_header_image 

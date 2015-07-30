@@ -144,12 +144,6 @@ function skt_itconsultant_pagination() {
 	}
 }
 
-define('SKT_URL','http://www.sktthemes.net');
-//define('SKT_THEME_URL','http://www.sktthemes.net/themes');
-//define('SKT_PRO_THEME_URL','http://sktthemesdemo.net/itconsultant/');
-//define('SKT_THEME_DOC','http://sktthemesdemo.net/documentation/itconsultant_documentation/');
-
-
 
 /**
  * Custom header for this theme.
@@ -215,3 +209,7 @@ add_filter( 'excerpt_length', 'skt_itconsultant_excerpt_length' );
 function itconsultant_credit_link(){
 	return "Designed By <a href=".esc_url(SKT_URL)." target=\"_blank\">SKT WordPress Themes</a>";
 	}
+	
+define('SKT_URL','http://www.sktthemes.net');	
+define('SKT_PRO_THEME_URL','http://www.sktthemes.net/shop/consultant-wordpress-theme/');
+define('SKT_THEME_DOC','http://sktthemesdemo.net/documentation/itconsultant_documentation/');

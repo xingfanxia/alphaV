@@ -1,11 +1,11 @@
 /*
 Theme Name: SKT IT Consultant
-Theme URI: http://www.sktthemes.net/themes/consultant-lite/
+Theme URI: http://www.sktthemes.net/shop/consultant-lite/
 Author: SKT Themes
 Author URI: http://www.sktthemes.net
-Description: SKT IT Consultant is a it solution theme and can be used for any type of consulting and networking websites. It is a responsive WordPress theme and is a color changing theme whereby you can change colors to whatever suit you the best. Comes with a default slider and an easy to use theme options. Documentation of this theme is available as well.
+Description: SKT IT Consultant is an IT solution theme and can be used for any type of consulting and networking websites. It is a simple and responsive WordPress theme and is a color changing theme whereby you can change colors to whatever suits you the best. Comes with a default slider and an easy to use theme options. Documentation of this theme is available as well.
 
-Version: 1.2.5
+Version: 1.2.6
 License: GNU General Public License
 License URI: license.txt
 Text Domain: itconsultant
@@ -91,7 +91,7 @@ h4.phone span{ color:#b40000;}
 .welcome_text .one_fourth:hover{ }
 .welcome_text .one_fourth a:hover{text-decoration:none; color:#fff;}
 .welcome_text .one_fourth h4{font-size:19px; margin:5px 40px; text-transform:capitalize; font-weight:bold;}
-.welcome_text .one_fourth:hover h4{color:#fff;}
+.welcome_text .one_fourth:hover h4 a{color:#fff;}
 .welcome_text .one_fourth .read{ font-size:14px; padding:0 20px 0 0; color:#b92626; background:url(images/readmore-icon.png) no-repeat right; display:inline-block;}
 .welcome_text .one_fourth:hover .read{background:url(images/readmore-icon_hover.png) no-repeat right; color:#fff;}
 .welcome_text .one_fourth p{ line-height:24px;}

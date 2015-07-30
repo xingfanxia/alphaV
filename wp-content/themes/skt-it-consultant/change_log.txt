@@ -21,3 +21,6 @@ i) Resolved issues as asked by reviewer.
 
 Version 1.2.5
 i) Resolved homepage boxes read more link issue.
+
+Version 1.2.6
+i) Resolved homepage boxes link issue and pro and theme url changed.

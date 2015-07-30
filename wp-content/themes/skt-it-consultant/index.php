@@ -58,9 +58,9 @@ get_header();
 						while( $queryvar->have_posts() ) : $queryvar->the_post(); ?> 
                         <div class="one_fourth <?php if($f % 4 == 0) { echo "last_column"; } ?>">
                         <div class="thumbox">
-							<?php  if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?>
+							<a href="<?php the_permalink(); ?>"><?php  if ( has_post_thumbnail() ) { the_post_thumbnail(); } ?></a>
                         </div>
-						<h4><?php the_title(); ?></h4>
+						<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 						<p><?php the_excerpt(); ?></p>
                         <a href="<?php the_permalink(); ?>"><span class="read"><?php _e('Read More','itconsultant'); ?></span></a>
                         </div>
@@ -69,9 +69,9 @@ get_header();
             <?php } else { ?>
 					<div class="one_fourth <?php if($f % 4 == 0) { echo "last_column"; } ?>">
                         <div class="thumbox">
-                            <img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/thumb-0<?php echo $f; ?>.png" alt="" />
+                            <a href="#"><img src="<?php echo esc_url(get_template_directory_uri()); ?>/images/thumb-0<?php echo $f; ?>.png" alt="" /></a>
                         </div>
-						<h4><?php _e('Page Title','itconsultant'); ?> <?php echo $f; ?></h4>
+						<h4><a href="#"><?php _e('Page Title','itconsultant'); ?> <?php echo $f; ?></a></h4>
 						<p><?php _e('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque augue eros, posuere a condimentum sit amet, rhoncus eu libero. Maecenas in tincidunt turpis, ut rhoncus neque.','itconsultant'); ?></p>
                         <a href="#"><span class="read"><?php _e('Read More','itconsultant'); ?></span></a>
                         </div>
