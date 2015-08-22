@@ -131,7 +131,7 @@ jQuery(window).scroll(function() {
 
 		var topOfWindow = jQuery(window).scrollTop();
 			if (imagePos < topOfWindow+400) {
-				jQuery(this).addClass("bounceIn");
+				jQuery(this).addClass("fadeIn");
 			}
 		});
 		

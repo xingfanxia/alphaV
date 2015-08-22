@@ -13,31 +13,31 @@
             	<div class="container"><h2><?php echo of_get_option('socialtitle',__('We Are Everywhere!','skt-white')) ; ?></h2>
                 		<div class="social-icons">
                 	<?php if( of_get_option('facebook',true) !=  ''){ ?>
-                		<a href="<?php echo esc_url(of_get_option('facebook','#')); ?>"><div class="facebook icon"></div></a>
+                		<a href="<?php echo esc_url(of_get_option('facebook','#')); ?>" target="_blank"><div class="facebook icon"></div></a>
                     <?php } ?>
                     <?php if( of_get_option('twitter',true) != '') { ?>
-                        <a href="<?php echo esc_url(of_get_option('twitter','#')); ?>"><div class="twitt icon"></div></a>
+                        <a href="<?php echo esc_url(of_get_option('twitter','#')); ?>" target="_blank"><div class="twitt icon"></div></a>
                     <?php } ?>
                     <?php if( of_get_option('gplus',true) != ''){ ?>
-                        <a href="<?php echo esc_url(of_get_option('gplus','#')); ?>"><div class="gplus icon"></div></a>
+                        <a href="<?php echo esc_url(of_get_option('gplus','#')); ?>" target="_blank"><div class="gplus icon"></div></a>
                    	<?php } ?>
                     <?php if( of_get_option('linkedin',true) != ''){ ?>
-                    	<a href="<?php echo esc_url(of_get_option('linkedin','#')); ?>"><div class="linked icon"></div></a>
+                    	<a href="<?php echo esc_url(of_get_option('linkedin','#')); ?>" target="_blank"><div class="linked icon"></div></a>
                     <?php } ?>
                     <?php if( of_get_option('pint',true) != ''){ ?>
-                    	<a href="<?php echo esc_url(of_get_option('pint','#')); ?>"><div class="pinterest icon"></div></a>
+                    	<a href="<?php echo esc_url(of_get_option('pint','#')); ?>" target="_blank"><div class="pinterest icon"></div></a>
                     <?php } ?>
                     <?php if( of_get_option('youtube',true) != ''){ ?>
-                    	<a href="<?php echo esc_url(of_get_option('youtube','#')); ?>"><div class="youtube icon"></div></a>
+                    	<a href="<?php echo esc_url(of_get_option('youtube','#')); ?>" target="_blank"><div class="youtube icon"></div></a>
                     <?php } ?>
                     <?php if( of_get_option('vimeo',true) != ''){ ?>
-                    	<a href="<?php echo esc_url(of_get_option('vimeo','#')); ?>"><div class="vimeo icon"></div></a>
+                    	<a href="<?php echo esc_url(of_get_option('vimeo','#')); ?>" target="_blank"><div class="vimeo icon"></div></a>
                     <?php } ?>
                     <?php if( of_get_option('rss',true) != ''){ ?>
-                    	<a href="<?php echo esc_url(of_get_option('rss','#')); ?>"><div class="rss icon"></div></a>
+                    	<a href="<?php echo esc_url(of_get_option('rss','#')); ?>" target="_blank"><div class="rss icon"></div></a>
                     <?php } ?>
                     <?php if( of_get_option('insta',true) != ''){ ?>
-                    	<a href="<?php echo esc_url(of_get_option('insta','#')); ?>"><div class="instagram icon"></div></a>
+                    	<a href="<?php echo esc_url(of_get_option('insta','#')); ?>" target="_blank"><div class="instagram icon"></div></a>
                     <?php } ?>
                     </div><!-- social-icons -->
                 </div><!-- container --> 
@@ -82,7 +82,7 @@
         
         <div class="copyright-wrapper">
         	<div class="copyright">
-            	<div class="copyright-txt"><?php echo of_get_option('copytext',__('&copy; 2014 SKT White. All Rights Reserved','skt-white')); ?></div>
+            	<div class="copyright-txt"><?php echo of_get_option('copytext',__('&copy; 2015 SKT White. All Rights Reserved','skt-white')); ?></div>
                 <div class="design-by"><?php echo of_get_option('ftlink',__('Design by SKT  Themes','skt-white')); ?></div>
             </div>
             <div class="clear"></div>

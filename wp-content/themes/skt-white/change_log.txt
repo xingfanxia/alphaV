@@ -54,3 +54,6 @@ i) Reduced size of the theme and rectified pricing in theme options.
 
 Version 1.6.1
 i) Resolved double tagline issue and navigation second line issue.
+
+Version 1.6.2
+i) Resolved URLS

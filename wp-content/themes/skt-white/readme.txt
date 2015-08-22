@@ -4,8 +4,8 @@
 
 Theme Name      :   SKT White
 Theme URI       :   http://www.sktthemes.net/themes/skt-white/
-Version         :   1.6.1
-Tested up to    :   WP 4.2.2
+Version         :   1.6.2
+Tested up to    :   WP 4.2.4
 Author          :   SKT Themes
 Author URI      :   http://www.sktthemes.net/
 

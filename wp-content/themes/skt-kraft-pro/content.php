@@ -12,6 +12,7 @@
                     <div class="post-date"><?php echo get_the_date(); ?></div><!-- post-date -->
                     <div class="post-comment"> | <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></div>
                     <div class="post-categories"> | <?php echo getPostCategories();?></div>
+                    <div class="post-views"> | <?php the_views();?></div>
                     <div class="clear"></div>
                 </div><!-- postmeta -->
             <?php endif; ?>

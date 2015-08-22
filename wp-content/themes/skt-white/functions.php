@@ -248,7 +248,7 @@ add_filter('excerpt_more', 'skt_white_new_excerpt_more');
 
 define('SKT_SITE_URL','http://www.sktthemes.net'); 
 define('SKT_THEME_URL','http://www.sktthemes.net/themes');
-define('SKT_PRO_THEME_URL','http://sktthemes.net/themes/skt-white-pro');
+define('SKT_PRO_THEME_URL','http://sktthemes.net/shop/skt-white-pro');
 define('SKT_THEME_DOC','http://sktthemesdemo.net/documentation/skt-white-doc/');
 
 
