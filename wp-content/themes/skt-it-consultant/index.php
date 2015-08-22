@@ -86,12 +86,12 @@ get_header();
 								        <header class="entry-header">
            									 <h3 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                                 <div class="postmeta">
-                                                     	<div class="post-date"><?php echo get_the_date(); ?></div><!-- post-date -->
+                                                     	<div class="post-date"><?php _e('Posted by','itconsultant'); ?>&nbsp;<?php echo get_the_author(); ?>&nbsp;<?php _e('at','itconsultant'); ?>&nbsp;<?php echo get_the_time(); ?></div><!-- post-date -->
                                                         <div class="post-comment"> &nbsp;|&nbsp; <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></div>
                                                         <div class="post-categories"> &nbsp;|&nbsp;  <?php the_category( __( ', ', 'itconsultant' )); ?></div>
                                                         <div class="clear"></div>
                                     			</div><!-- postmeta -->
-                       			 	<div class="post-thumb"><?php the_post_thumbnail(); ?></div><!-- post-thumb -->
+                       			 	<div class="post-thumb"><a href="<?php the_permalink(); ?>"><?php the_post_thumbnail(); ?></a></div><!-- post-thumb -->
        							 </header><!-- .entry-header -->
                                 <div class="entry-summary">
                             		<p><?php the_excerpt(); ?></p>

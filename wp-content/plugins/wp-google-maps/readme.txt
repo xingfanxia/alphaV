@@ -3,7 +3,7 @@ Contributors: WPGMaps
 Donate link: http://www.wpgmaps.com
 Tags: google maps, maps, map, map markers, google, google map, wp maps, wp google maps, wp google map, easy map, store locator, map plugin, directions, map directions, google map plugin, routes, polygons, polylines, streetview, location, marker, latitude, longitude, map widget
 Requires at least: 3.5
-Tested up to: 4.2.3
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2
 
@@ -197,6 +197,12 @@ We no longer support timthumb and we have opted to remove it from WP Google Maps
 Please upgrade your version of WP Google Maps to version 6.0.27 as it includes multiple security improvements.
 
 == Changelog ==
+
+= 6.2.3 - 2015-08-20 - High priority =
+* Included the latest version of datatables to fix the bug experienced with the new jQuery being included in WordPress 4.3
+* Updated datatables.responsive to 1.0.7 and included the minified version of the file instead
+* Fixed a few styling bugs in the map editor
+* WP Google Maps tested with WordPress 4.3
 
 = 6.2.2 - Security Update - 2015-07-27 - High Priority =
 * Security patch

@@ -24,3 +24,6 @@ i) Resolved homepage boxes read more link issue.
 
 Version 1.2.6
 i) Resolved homepage boxes link issue and pro and theme url changed.
+
+Version 1.2.7
+i) Changed index latest posts thumbnail links and added author info.

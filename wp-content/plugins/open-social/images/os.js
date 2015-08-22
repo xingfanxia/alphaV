@@ -8,14 +8,14 @@ function share_button_click(link){
 	if(!link){
 		if(!window.jQuery) return;
 		var elm = window.event.target || window.event.srcElement;
-		var qrDiv = jQuery(elm).next('.open_social_qrcode');
+		var qrDiv = jQuery(elm).parent().find('.open_social_qrcode');
 		if(!qrDiv.find('canvas').length){
 			qrDiv.qrcode({width:200,height:200,text:location.href});
 		}
 		qrDiv.toggle(250);
 	}else{
 		var url = encodeURIComponent(location.href);
-		var title = encodeURIComponent(document.title + ': ' + window.jQuery ? (jQuery('article .entry-content').text().replace(/\r|\n|\t| /g,'').substr(0,100)) : '');
+		var title = encodeURIComponent(document.title + (window.jQuery ? (': ' + jQuery('article .entry-content').text().replace(/\r|\n|\t/g,'').replace(/ +/g,' ').replace(/<!--(.*)\/\/-->/g,'').substr(0,100)) : ''));
 		var pic = '';
 		window.jQuery && jQuery('#content > article img').each(function(){pic+=(pic?'||':'')+encodeURIComponent(jQuery(this).attr('src'));});
 		window.open(link.replace("%URL%",url).replace("%TITLE%",title).replace("%PIC%",pic),'xmOpenWindow','width=600,height=480,menubar=0,scrollbars=1,resizable=1,status=1,titlebar=0,toolbar=0,location=1');

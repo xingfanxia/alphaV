@@ -3,12 +3,18 @@
 Plugin Name: WP Google Maps
 Plugin URI: http://www.wpgmaps.com
 Description: The easiest to use Google Maps plugin! Create custom Google Maps with high quality markers containing locations, descriptions, images and links. Add your customized map to your WordPress posts and/or pages quickly and easily with the supplied shortcode. No fuss.
-Version: 6.2.2
+Version: 6.2.3
 Author: WP Google Maps
 Author URI: http://www.wpgmaps.com
 */
 
-/* 6.2.2 - Security Update - 2015-07-27 - High Priority
+/* 
+ * 6.2.3 - 2015-08-20 - High priority
+ * Included the latest version of datatables to fix the bug experienced with the new jQuery being included in WordPress 4.3
+ * Updated datatables.responsive to 1.0.7 and included the minified version of the file instead
+ * Fixed a few styling bugs in the map editor
+ * 
+ * 6.2.2 - Security Update - 2015-07-27 - High Priority
  * Security patch
  * Tested with WP 4.2.3
  * 
@@ -176,8 +182,8 @@ $wpgmza_tblname_poly = $wpdb->prefix . "wpgmza_polygon";
 $wpgmza_tblname_polylines = $wpdb->prefix . "wpgmza_polylines";
 $wpgmza_tblname_categories = $wpdb->prefix. "wpgmza_categories";
 $wpgmza_tblname_category_maps = $wpdb->prefix. "wpgmza_category_maps";
-$wpgmza_version = "6.2.2";
-$wpgmza_p_version = "6.2.2";
+$wpgmza_version = "6.2.3";
+$wpgmza_p_version = "6.2.3";
 $wpgmza_t = "basic";
 define("WPGMAPS", $wpgmza_version);
 define("WPGMAPS_DIR",plugin_dir_url(__FILE__));
@@ -1567,7 +1573,9 @@ function wpgmaps_user_javascript_basic() {
             <?php if (isset($markers) && strlen($markers) > 0 && $markers != "[]"){ ?>var db_marker_array = JSON.stringify(<?php echo $markers; ?>);<?php } else { echo "var db_marker_array = '';"; } ?>
                    
             if ('undefined' === typeof window.jQuery) {
-                document.getElementById('wpgmza_map').innerHTML = 'Error: In order for WP Google Maps to work, jQuery must be installed. A check was done and jQuery was not present. Please see the <a href="http://www.wpgmaps.com/documentation/troubleshooting/jquery-troubleshooting/" title="WP Google Maps - jQuery Troubleshooting">jQuery troubleshooting section of our site</a> for more information.';
+                setTimeout(function(){ 
+                    document.getElementById('wpgmza_map').innerHTML = 'Error: In order for WP Google Maps to work, jQuery must be installed. A check was done and jQuery was not present. Please see the <a href="http://www.wpgmaps.com/documentation/troubleshooting/jquery-troubleshooting/" title="WP Google Maps - jQuery Troubleshooting">jQuery troubleshooting section of our site</a> for more information.';
+                }, 3000);
             } else {
                 /* all good.. continue... */
             }
@@ -4717,22 +4725,22 @@ function wpgmza_basic_menu() {
                                 </tr>                                
 
                             </table>
-                            <div class=\"wrap about-wrap\" style=\"height:400px; display:block;\">
-                            <div class=\"feature-section three-col  clear\">
-                                <div style=\"width:28%;\">
+                            <div class=\"about-wrap\">
+                            <div class=\"feature-section three-col\">
+                                <div class=\"col\">
                                 <h4>".__("Basic","wp-google-maps")."</h4>
                                 <p style='display:block; height:40px;'>".__("Show a basic list of your markers","wp-google-maps")."</p>
-                                 <img src='".WPGMAPS_DIR."base/assets/marker-listing-basic.jpg' style=\"border:5px solid #ccc;\" />              
+                                 <img src='".WPGMAPS_DIR."base/assets/marker-listing-basic.jpg' style=\"border:1px solid #ccc;\" />              
                                 </div>
-                                <div style=\"width:28%;\">
+                                <div class=\"col\">
                                 <h4>".__("Carousel","wp-google-maps")."</h4>
                                 <p style='display:block; height:40px;'>".__("Beautiful, responsive, mobile-friendly carousel marker listing","wp-google-maps")."</p>
-                                 <img src='".WPGMAPS_DIR."base/assets/marker-listing-carousel.jpg' style=\"border:5px solid #ccc;\" />              
+                                 <img src='".WPGMAPS_DIR."base/assets/marker-listing-carousel.jpg' style=\"border:1px solid #ccc;\" />              
                                 </div>
-                                <div style=\"width:28%;\">
+                                <div class=\"col\">
                                 <h4>".__("Tabular","wp-google-maps")."</h4>
                                 <p style='display:block; height:40px;'>".__("Advanced, tabular marker listing functionality with real time filtering","wp-google-maps")."</p>
-                                 <img src='".WPGMAPS_DIR."base/assets/marker-listing-advanced.jpg' style=\"border:5px solid #ccc;\" />              
+                                 <img src='".WPGMAPS_DIR."base/assets/marker-listing-advanced.jpg' style=\"border:1px solid #ccc;\" />              
                                 </div>
                             </div>
                             </div>

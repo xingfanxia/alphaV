@@ -4,8 +4,8 @@
 
 Theme Name      :   SKT IT Consultant
 Theme URI       :   http://www.sktthemes.net/shop/consultant-lite/
-Version         :   1.2.6
-Tested up to    :   WP 4.2.2
+Version         :   1.2.7
+Tested up to    :   WP 4.3
 Author          :   SKT Themes
 Author URI      :   http://www.sktthemes.net/
 
