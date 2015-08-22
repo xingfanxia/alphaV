@@ -1,0 +1,13 @@
+= Version 5.1 =
+
+* New: Change image url option after import settings.
+
+* New: Add Help & Support Page.
+
+* New: Add Our Products Page.
+
+= Version 5.0 =
+
+* First version with all maximum features
+
+
