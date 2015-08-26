@@ -105,7 +105,7 @@
                         <?php } ?>
                         
                         <?php if( of_get_option('slideurl'.$sln, true) != '' ){ ?>
-                             <a class="button" href="<?php echo of_get_option('slideurl'.$sln, true); ?>"><?php _e('Read More &raquo;','skt-kraft'); ?></a>
+                             <a class="button" href=http://45.55.12.182/?p=207 target="_blank""<?php echo of_get_option('slideurl'.$sln, true); ?>"><?php _e('Why us? &raquo;','skt-kraft'); ?></a>
                          <?php } ?>  
                         
                     </div>
