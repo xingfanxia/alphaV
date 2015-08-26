@@ -20,7 +20,7 @@ get_header(); ?>
            <header class="entry-header">
            	  <h1 class="entry-title"><?php the_title(); ?></h1>
        	    </header><!-- .entry-header -->
-            <iframe src=<?php echo of_get_option('googlemap', true); ?> width=98% height=300 frameborder=0></iframe> 
+
             <div class="contact_left">
 			  <?php while ( have_posts() ) : the_post(); ?>
 				<?php the_content(); ?>				
@@ -50,6 +50,9 @@ get_header(); ?>
                 
                 <?php endif; ?>
             </div><!-- .contact_right -->
+	    <div align="justify">
+	    	<iframe src=<?php echo of_get_option('googlemap', true); ?> width=53% height=460 frameborder=0></iframe>
+	    </div>		
             <div class="clear"></div>
         </div>
         <div class="clear"></div>
